@@ -20,7 +20,7 @@ privata och metoderna publika.
 
        // Här refererar (pekar) kalle till ett nytt Person-objekt
        Person kalle = new Person ("Kalle Persson");
-       //Hur skriver du här om du vill att referensen kalle inte ska peka på
+       //Hur skriver du här om du vill att referensen kalle *inte* ska peka på
          något objekt ????????  
 
 
@@ -74,7 +74,7 @@ privata och metoderna publika.
    När man ska initiera ett cirkel-objekt ska man kunna välja på följande två
    alternativ:
 
-   - välja både färg och radie på cirkeln
+   - välja *både* färg och radie på cirkeln
    - välja endast radien på cirkeln, men cirkelns färg blir alltid gul
 
    Detta betyder att du behöver två stycken konstruktorer (som överlagrar
@@ -83,7 +83,7 @@ privata och metoderna publika.
    Slutligen skriv ett testprogram som testar så att klassens metoder fungerar
    som de ska.  Skapa åtminstone två stycken cirkel-objekt, som använder sig av
    olika konstruktorer. Alla decimaltals-utskrifter på skärmen ska avrundas
-   till en decimal.
+   till *en* decimal.
 
    Tips: För att vid utskrift avrunda ett decimaltal använd klassen
    DecimalFormat, finns exempel i boken hur du använder denna. Den ligger i
