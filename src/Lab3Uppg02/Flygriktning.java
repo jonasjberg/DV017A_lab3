@@ -12,10 +12,19 @@ package Lab3Uppg02;
 /* The Java Tutorials -- Enum Types
  * https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html */
 
-/* Ett numeriskt värde av Flygriktning kan hämtas med metoden 'getOrdinal()'
- * STOPPED ger då värdet 0, NORTH ger 1, EAST ger 2, osv..
- */
-
 public enum Flygriktning {
-    STOPPED, NORTH, EAST, SOUTH, WEST
+    /* Ett numeriskt värde av Flygriktning kan hämtas med metoden 'getOrdinal()'
+     * STOPPED ger då värdet 0, NORTH ger 1, EAST ger 2, osv.. */
+    STOPPED, NORTH, EAST, SOUTH, WEST;
+
+    /* Metoden 'values()' returnerar en array som innehåller enumens värden
+     * i den ordning de deklarerades. (STOPPED = 0, NORTH = 1, osv.. ) */
+    private static Flygriktning[] allValues = values();
+
+    /* Metod för att kunna sätta en enum med en int. 
+     * Förutsätter att ordningen för "enumens" värden inte ändras. */
+    public static Flygriktning fromOrdinal(int n)
+    {
+        return allValues[n];
+    }
 }

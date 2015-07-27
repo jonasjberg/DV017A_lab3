@@ -14,8 +14,6 @@ public class Lab3Uppg02
     private static FlygPlan       planEtt;
     private static FlygPlan       planTva;
 
-    private static Flygriktning[] flygriktningar = Flygriktning.values();
-
     public static void main(String[] args)
     {
         planEtt = new FlygPlan(900, Flygriktning.EAST, 3300, "JAS 39 Gripen");
@@ -32,22 +30,11 @@ public class Lab3Uppg02
         planTva.setIdentifier("UFO!");
 
         /* Använd metod för att ändra flygriktning med en int: */
-        planTva.setHeading(getFlygriktning(0));
+        planTva.setHeading(Flygriktning.fromOrdinal(0));
 
         skrivUtData("Uppdaterad data:");
         planEtt.printInfo();
         planTva.printInfo();
-    }
-
-    /** 
-     * Gör det möjligt att sätta flygriktning med en 'int' genom att
-     * kolla upp korresponderande enum i arrayen 'flygriktningar'
-     * @param i         flygriktning
-     * @return          enum Flygriktning i position 'i'
-     */
-    public static Flygriktning getFlygriktning(int i)
-    {
-        return flygriktningar[i];
     }
 
     /**

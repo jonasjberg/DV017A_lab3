@@ -34,13 +34,13 @@ public class FlygPlan
             speed = 0;
         }
     }
-    
-    public FlygPlan(int altitude, int heading, int speed,
-            String identifier) {
-        this(altitude);
-        this(heading);
-        this(speed;
-        identifier;
+
+    /**
+     * Alternativ konstruktor hanterar att 'heading' sätt till ett värde av
+     * typen 'int'.
+     */
+    public FlygPlan(int altitude, int heading, int speed, String identifier) {
+        this(altitude, Flygriktning.fromOrdinal(heading), speed, identifier);
     }
 
     /**
