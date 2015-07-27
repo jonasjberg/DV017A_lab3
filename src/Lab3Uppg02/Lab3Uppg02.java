@@ -7,7 +7,12 @@
  * Labb #3    Uppgift 2
  */
 
-public class FlygPlan
-{
+package Lab3Uppg02;
 
+public class Lab3Uppg02
+{
+    public static void main(String[] args)
+    {
+
+    }
 }
