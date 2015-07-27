@@ -15,8 +15,21 @@ public class FlygPlan
     private int          speed;     // hastighet
     private String       identifier; // modellbeteckning
 
+    public FlygPlan(int altitude, Flygriktning heading, int speed,
+            String identifier) {
+        this.altitude = altitude;
+        this.heading = heading;
+        this.speed = speed;
+        this.identifier = identifier;
+        
+        if (heading == Flygriktning.STOPPED) {
+            speed = 0;
+        }
+    }
+
     /**
      * Returnerar planets höjd.
+     * 
      * @return planets höjd
      */
     public int getAltitude()
@@ -26,6 +39,7 @@ public class FlygPlan
 
     /**
      * Ändrar planets höjd.
+     * 
      * @param altitude
      */
     public void setAltitude(int altitude)
@@ -35,6 +49,7 @@ public class FlygPlan
 
     /**
      * Returnerar planets flygriktning.
+     * 
      * @return
      */
     public Flygriktning getHeading()
@@ -44,7 +59,9 @@ public class FlygPlan
 
     /**
      * Ändrar planets flygriktning.
-     * @param heading   ny flygriktning
+     * 
+     * @param heading
+     *            ny flygriktning
      */
     public void setHeading(Flygriktning heading)
     {
@@ -53,6 +70,7 @@ public class FlygPlan
 
     /**
      * Returnerar planets hastighet.
+     * 
      * @return
      */
     public int getSpeed()
@@ -62,29 +80,55 @@ public class FlygPlan
 
     /**
      * Ändrar planets hastighet.
-     * @param speed     ny hastighet
+     * 
+     * @param speed
+     *            ny hastighet
      */
     public void setSpeed(int speed)
     {
-        this.speed = speed;
+        /* Anta att speed inte är en vektor. */
+        if (speed > 0) {
+            this.speed = speed;
+        }
     }
 
     /**
      * Returnerar planets modellbeteckning.
-     * @return      planets modellbeteckning
+     * 
+     * @return planets modellbeteckning
      */
     public String getIdentifier()
     {
-        return identifier;
+        if (identifier != null) {
+            return identifier;
+        } else {
+            return "Planet saknar modellbeteckning!";
+        }
     }
 
     /**
      * Ändrar planets modellbeteckning
-     * @param identifier    ny modellbeteckning
+     * 
+     * @param identifier
+     *            ny modellbeteckning
      */
     public void setIdentifier(String identifier)
     {
         this.identifier = identifier;
+    }
+    
+    /**
+     * Skriver ut alla data om flygplanet.
+     */
+    public void printInfo()
+    {
+        System.out.println("Flygplansdata");
+        System.out.println("-------------");
+        System.out.println("Höjd:             " + getAltitude());
+        System.out.println("Flygriktning:     " + getHeading().ordinal());
+        System.out.println("Hastighet:        " + getSpeed());
+        System.out.println("Modellbeteckning: " + getIdentifier());
+        System.out.println("");
     }
 
 }
