@@ -11,5 +11,4 @@ package Lab3Uppg03;
 
 public class Cirkel
 {
-
 }
