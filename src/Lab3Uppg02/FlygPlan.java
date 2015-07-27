@@ -34,6 +34,14 @@ public class FlygPlan
             speed = 0;
         }
     }
+    
+    public FlygPlan(int altitude, int heading, int speed,
+            String identifier) {
+        this(altitude);
+        this(heading);
+        this(speed;
+        identifier;
+    }
 
     /**
      * Returnerar planets höjd.

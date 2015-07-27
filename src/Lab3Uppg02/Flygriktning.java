@@ -12,6 +12,10 @@ package Lab3Uppg02;
 /* The Java Tutorials -- Enum Types
  * https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html */
 
+/* Ett numeriskt värde av Flygriktning kan hämtas med metoden 'getOrdinal()'
+ * STOPPED ger då värdet 0, NORTH ger 1, EAST ger 2, osv..
+ */
+
 public enum Flygriktning {
     STOPPED, NORTH, EAST, SOUTH, WEST
 }
