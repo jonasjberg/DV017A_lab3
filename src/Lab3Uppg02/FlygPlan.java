@@ -1,27 +1,35 @@
-package Lab3Uppg02;
-
 /**
- * DV017A :: Grundläggande programmering i Java 860224 Jonas Sjöberg Högskolan i
- * Gävle tel12jsg@student.hig.se
- * 
- * Labb #3 Uppgift 2
+ * DV017A :: Grundläggande programmering i Java
+ * 860224 Jonas Sjöberg
+ * Högskolan i Gävle
+ * tel12jsg@student.hig.se
+ *
+ * Labb #3    Uppgift 2
  */
+
+package Lab3Uppg02;
 
 public class FlygPlan
 {
+    private int          altitude;
+    private Flygriktning heading;
+    private int          speed;
+    private String       identifier;
 
-    private int          altitude;  // höjd
-    private Flygriktning heading;   // flygriktning
-    private int          speed;     // hastighet
-    private String       identifier; // modellbeteckning
-
+    /**
+     * Konstruktor för ett Flygplan
+     * @param altitude      flygplanets höjd
+     * @param heading       flygplanets riktning
+     * @param speed         flygplanets hastighet
+     * @param identifier    flygplanets modellbeteckning
+     */
     public FlygPlan(int altitude, Flygriktning heading, int speed,
             String identifier) {
         this.altitude = altitude;
         this.heading = heading;
         this.speed = speed;
         this.identifier = identifier;
-        
+
         if (heading == Flygriktning.STOPPED) {
             speed = 0;
         }
@@ -40,7 +48,7 @@ public class FlygPlan
     /**
      * Ändrar planets höjd.
      * 
-     * @param altitude
+     * @param altitude  ny höjd
      */
     public void setAltitude(int altitude)
     {
@@ -50,7 +58,7 @@ public class FlygPlan
     /**
      * Returnerar planets flygriktning.
      * 
-     * @return
+     * @return planets flygriktning
      */
     public Flygriktning getHeading()
     {
@@ -60,8 +68,7 @@ public class FlygPlan
     /**
      * Ändrar planets flygriktning.
      * 
-     * @param heading
-     *            ny flygriktning
+     * @param heading   ny flygriktning
      */
     public void setHeading(Flygriktning heading)
     {
@@ -71,7 +78,7 @@ public class FlygPlan
     /**
      * Returnerar planets hastighet.
      * 
-     * @return
+     * @return planets hastighet
      */
     public int getSpeed()
     {
@@ -81,8 +88,7 @@ public class FlygPlan
     /**
      * Ändrar planets hastighet.
      * 
-     * @param speed
-     *            ny hastighet
+     * @param speed     ny hastighet
      */
     public void setSpeed(int speed)
     {
@@ -109,14 +115,13 @@ public class FlygPlan
     /**
      * Ändrar planets modellbeteckning
      * 
-     * @param identifier
-     *            ny modellbeteckning
+     * @param identifier    ny modellbeteckning
      */
     public void setIdentifier(String identifier)
     {
         this.identifier = identifier;
     }
-    
+
     /**
      * Skriver ut alla data om flygplanet.
      */
@@ -130,5 +135,4 @@ public class FlygPlan
         System.out.println("Modellbeteckning: " + getIdentifier());
         System.out.println("");
     }
-
 }

@@ -1,23 +1,17 @@
+/**
+ * DV017A :: Grundläggande programmering i Java
+ * 860224 Jonas Sjöberg
+ * Högskolan i Gävle
+ * tel12jsg@student.hig.se
+ *
+ * Labb #3    Uppgift 2
+ */
+
 package Lab3Uppg02;
 
 /* The Java Tutorials -- Enum Types
  * https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html */
 
 public enum Flygriktning {
-    STOPPED (0), 
-    NORTH   (1), 
-    EAST    (2), 
-    SOUTH   (3), 
-    WEST    (4);
-
-    private final int value;
-
-    Flygriktning(int value) {
-        this.value = value;
-    }
-    
-    private int value() {
-        return value;
-    }
-
+    STOPPED, NORTH, EAST, SOUTH, WEST
 }
