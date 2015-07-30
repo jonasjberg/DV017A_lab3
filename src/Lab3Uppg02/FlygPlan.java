@@ -100,8 +100,7 @@ public class FlygPlan
      */
     public void setSpeed(int speed)
     {
-        /* Anta att speed inte är en vektor. */
-        if (speed > 0) {
+        if (speed > 0) {                /* Anta att speed inte är en vektor. */
             this.speed = speed;
         }
     }
@@ -131,7 +130,7 @@ public class FlygPlan
     }
 
     /**
-     * Skriver ut alla data om flygplanet.
+     * Skriver ut all data om flygplanet.
      */
     public void printInfo()
     {

@@ -2,21 +2,35 @@
 
 \subsection{Instruktioner}
 \begin{verbatim}
-TODO: Lägg till intruktioner
+1. Hur visar man att en referensvariabel inte refererar (pekar) på något
+   objekt? Utgå från följande lilla kodsnutt:
+
+   //Här refererar (pekar) kalle till ett nytt Person-objekt
+   Person kalle = new Person ("Kalle Persson");
+   //Hur skriver du här om du vill att referensen kalle *inte*
+   //ska peka på något objekt ????????
 \end{verbatim}
 
 
-\subsection{Källkod}
-\javacode{src/main/Lab3Uppg01.java}
-\caption{Lab3Uppg01.java}
-\label{src:uppg01}
+\subsection{Svar}
+Om referensen \texttt{kalle} inte ska peka på något objekt så måste
+referensvariabeln \texttt{kalle} sättas till att peka på \emph{ingenting},
+eller \texttt{null}.  Referensvariabeln sätts till \texttt{null} genom att man
+skriver:
+\begin{verbatim}kalle = null;\end{verbatim}
 
 
-\subsection{Skärmdump}
-\begin{figure}[htbp]
-    \centering
-        \includegraphics[width=\linewidth]{img/01.png}
-    \caption{Körning av koden till Uppgift~\ref{sec:uppg01}}
-    \label{fig:uppg01-screenshot}
-\end{figure}
+%\subsection{Källkod}
+%\javacode{src/main/Lab3Uppg01.java}
+%\caption{Lab3Uppg01.java}
+%\label{src:uppg01}
+
+
+%\subsection{Skärmdump}
+%\begin{figure}[htbp]
+    %\centering
+        %\includegraphics[width=\linewidth]{img/01.png}
+    %\caption{Körning av koden till Uppgift~\ref{sec:uppg01}}
+    %\label{fig:uppg01-screenshot}
+%\end{figure}
 

@@ -52,7 +52,9 @@ public class Cirkel
      */
     public void setRadius(int radius)
     {
-        this.radius = radius;
+        if (radius > 0) {
+            this.radius = radius;
+        }
     }
 
     /**
@@ -72,7 +74,7 @@ public class Cirkel
     {
         this.color = color;
     }
-    
+
     /**
      * Beräknar och returnerar cirkelns omkrets.
      * @return      cirkelns omkrets
@@ -82,7 +84,7 @@ public class Cirkel
         double omkrets = 2 * Math.PI * getRadius();
         return omkrets;
     }
-    
+
     public double getArea()
     {
         /* Den lokal variabeln 'radius' håller värdet från 'getRadius()'
