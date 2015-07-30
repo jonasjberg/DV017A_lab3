@@ -120,7 +120,7 @@ public class FlygPlan
     }
 
     /**
-     * Ändrar planets modellbeteckning
+     * Ändrar planets modellbeteckning.
      * 
      * @param identifier    ny modellbeteckning
      */

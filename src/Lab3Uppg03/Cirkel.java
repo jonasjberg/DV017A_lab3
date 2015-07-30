@@ -38,7 +38,7 @@ public class Cirkel
     }
 
     /**
-     * Returnerar cirkelns radie
+     * Returnerar cirkelns radie.
      * @return      cirkelns radie
      */
     public int getRadius()
@@ -47,7 +47,7 @@ public class Cirkel
     }
 
     /**
-     * Ändrar cirkelns radie
+     * Ändrar cirkelns radie.
      * @param radius    ny radie
      */
     public void setRadius(int radius)
@@ -58,7 +58,7 @@ public class Cirkel
     }
 
     /**
-     * Returnerar cirkelns färg
+     * Returnerar cirkelns färg.
      * @return      cirkelns färg
      */
     public String getColor()
@@ -67,7 +67,7 @@ public class Cirkel
     }
 
     /**
-     * Ändrar cirkelns färg
+     * Ändrar cirkelns färg.
      * @param color     ny färg
      */
     public void setColor(String color)
@@ -85,6 +85,10 @@ public class Cirkel
         return omkrets;
     }
 
+    /**
+     * Beräknar och returnerar cirkelns area.
+     * @return      cirkelns area
+     */
     public double getArea()
     {
         /* Den lokal variabeln 'radius' håller värdet från 'getRadius()'
