@@ -118,5 +118,6 @@ crashlytics.properties
 crashlytics-build.properties
 
 
-# TODO
+# Minted TeX source highlighting
 _minted*
+*.pyg
