@@ -1,3 +1,12 @@
+/**
+ * DV017A :: Grundläggande programmering i Java
+ * 860224 Jonas Sjöberg
+ * Högskolan i Gävle
+ * tel12jsg@student.hig.se
+ *
+ * Labb #3    Uppgift 4
+ */
+
 package Lab3Uppg04;
 
 import java.awt.BorderLayout;
