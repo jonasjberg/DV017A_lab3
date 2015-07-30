@@ -16,6 +16,9 @@ public class Lab3Uppg03
     private static Cirkel c1;
     private static Cirkel c2;
 
+    /**
+     * Testar metoder hos klassen 'Cirkel'.
+     */
     public static void main(String[] args)
     {
         int radius = 13;
@@ -63,13 +66,11 @@ public class Lab3Uppg03
         System.out.println("Cirkeln \"" + c + "\" har " + a + ": " + v);
     }
 
-    /** Skriver ut värdet 'v' för attributet 'a' hos cirkeln 'c' */
     private static void promptInfo(String c, String a, String v)
     {
         System.out.println("Cirkeln \"" + c + "\" har " + a + ": " + v);
     }
 
-    /** Skriver ut värdet 'v' för attributet 'a' hos cirkeln 'c' */
     private static void promptInfo(String c, String a, double v)
     {
         System.out.println("Cirkeln \"" + c + "\" har " + a + ": " + round(v));
@@ -78,7 +79,7 @@ public class Lab3Uppg03
     /**
      * Avrunda decimaltal till en decimal med DecimalFormat
      * @param n     tal att avrunda
-     * @return      talet 'n' avrundat till en decimal som textsträng
+     * @return      talet 'n' som textsträng, avrundat till en decimal
      */
     private static String round(double n)
     {

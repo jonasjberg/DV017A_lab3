@@ -54,6 +54,8 @@ public class Cirkel
     {
         if (radius > 0) {
             this.radius = radius;
+        } else {
+            System.out.println("Radien måste vara större än noll!");
         }
     }
 
@@ -93,12 +95,10 @@ public class Cirkel
     {
         /* Den lokal variabeln 'radius' håller värdet från 'getRadius()'
          * Användningen av en lokal variabel för mellanlagring motiveras med
-         * ökad läslighet av kod, snarare än "optimering" i och med färre
-         * metodanrop.
+         * ökad läslighet av kod, snarare än "optimering" (färre metodanrop).
          */
         int radius = getRadius();
         double area = Math.PI * radius * radius;
         return area;
     }
-
 }
