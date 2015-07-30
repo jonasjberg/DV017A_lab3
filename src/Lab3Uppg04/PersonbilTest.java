@@ -9,12 +9,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JSplitPane;
+import javax.swing.JLabel;
 
 public class PersonbilTest extends JFrame
 {
     private JPanel contentPane;
-    private JTextPane textPane1;
-    private JTextPane textPane2;
     
     private static Personbil bil1;
     private static Personbil bil2;
@@ -42,6 +41,7 @@ public class PersonbilTest extends JFrame
      */
     public PersonbilTest()
     {
+        Color backgroundColor = Color.CYAN;
         initialize();
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -51,17 +51,22 @@ public class PersonbilTest extends JFrame
         contentPane.setLayout(new BorderLayout(0, 0));
         setContentPane(contentPane);
         
-        textPane2 = new JTextPane();
-        textPane2.setEditable(false);
-        textPane2.setText("Bil #2");
-        contentPane.add(textPane2, BorderLayout.EAST);
+        JSplitPane splitPane = new JSplitPane();
+        splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
+        contentPane.add(splitPane, BorderLayout.CENTER);
         
-        textPane1 = new JTextPane();
-        contentPane.add(textPane1, BorderLayout.WEST);
-        textPane1.setEditable(false);
-        textPane1.setText("Bil #1");
+        JSplitPane splitPane_1 = new JSplitPane();
+        splitPane.setLeftComponent(splitPane_1);
+        splitPane_1.setBackground(backgroundColor);
         
-        showData(bil1, textPane1);
+        JLabel lblData = new JLabel("Data1");
+        splitPane_1.setLeftComponent(lblData);
+        
+        JSplitPane splitPane_2 = new JSplitPane();
+        splitPane.setRightComponent(splitPane_2);
+        
+        JLabel lblData_1 = new JLabel("Data2");
+        splitPane_2.setLeftComponent(lblData_1);
     }
     
     private static void initialize()
@@ -72,10 +77,6 @@ public class PersonbilTest extends JFrame
     
     private static void showData(Personbil bil, JTextPane pane)
     {
-        pane.setText("Modell: " + bil.getModel() 
-                   + "\nTillverkningsår: " + bil.getYearManufactured()
-                   + "\nRegistreringsnummer: " + bil.getRegistrationNumber()
-                   + "\nFärg:                " + bil.getColor().toString());
         
     }
 }

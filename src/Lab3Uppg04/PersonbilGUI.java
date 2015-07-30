@@ -1,24 +1,23 @@
 package Lab3Uppg04;
 
-import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
-import java.awt.GridLayout;
-import javax.swing.border.LineBorder;
-import java.awt.Color;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
 
 public class PersonbilGUI extends JFrame
 {
-    
+
     Color backgroundColor = Color.RED;
+    Font  stdFont         = new Font("monospaced", 0, 12);
+    Font  stdFontBold     = new Font("monospaced", 1, 12);
 
     private JPanel contentPane;
 
@@ -51,13 +50,13 @@ public class PersonbilGUI extends JFrame
         initialize();
         createFrame();
     }
-    
+
     private static void initialize()
     {
         bil1 = new Personbil("Saab", 1990, "CCC222", Color.RED);
         bil2 = new Personbil("Volvo", 1999, "ABC988 ", Color.BLACK);
     }
-    
+
     private void createFrame()
     {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -66,63 +65,92 @@ public class PersonbilGUI extends JFrame
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         GridBagLayout gbl_contentPane = new GridBagLayout();
-        gbl_contentPane.columnWidths = new int[]{0, 0, 0};
-        gbl_contentPane.rowHeights = new int[]{0, 0, 0};
-        gbl_contentPane.columnWeights = new double[]{1.0, 1.0, Double.MIN_VALUE};
-        gbl_contentPane.rowWeights = new double[]{1.0, 1.0, Double.MIN_VALUE};
+        gbl_contentPane.columnWidths = new int[] { 0, 0, 0 };
+        gbl_contentPane.rowHeights = new int[] { 0, 0, 0 };
+        gbl_contentPane.columnWeights = new double[] { 1.0, 1.0,
+                Double.MIN_VALUE };
+        gbl_contentPane.rowWeights = new double[] { 1.0, 1.0,
+                Double.MIN_VALUE };
         contentPane.setLayout(gbl_contentPane);
-        
-        JPanel panel = new JPanel();
-        GridBagConstraints gbc_panel = new GridBagConstraints();
-        gbc_panel.insets = new Insets(0, 0, 5, 5);
-        gbc_panel.fill = GridBagConstraints.BOTH;
-        gbc_panel.gridx = 0;
-        gbc_panel.gridy = 0;
-        contentPane.add(panel, gbc_panel);
-        
-        JLabel lblBilData = new JLabel("Bil #1 Data");
-        panel.add(lblBilData);
-        
-        JPanel panel_2 = new JPanel();
-        panel_2.setBackground(Color.GREEN);
-        GridBagConstraints gbc_panel_2 = new GridBagConstraints();
-        gbc_panel_2.insets = new Insets(0, 0, 5, 0);
-        gbc_panel_2.fill = GridBagConstraints.BOTH;
-        gbc_panel_2.gridx = 1;
-        gbc_panel_2.gridy = 0;
-        contentPane.add(panel_2, gbc_panel_2);
-        
-        JPanel panel_1 = new JPanel();
-        GridBagConstraints gbc_panel_1 = new GridBagConstraints();
-        gbc_panel_1.insets = new Insets(0, 0, 0, 5);
-        gbc_panel_1.fill = GridBagConstraints.BOTH;
-        gbc_panel_1.gridx = 0;
-        gbc_panel_1.gridy = 1;
-        contentPane.add(panel_1, gbc_panel_1);
-        
-        JLabel lblBilData_1 = new JLabel("Bil #2 Data");
-        panel_1.add(lblBilData_1);
-        
-        JPanel panel_3 = new JPanel();
-        panel_3.setBackground(Color.BLACK);
-        GridBagConstraints gbc_panel_3 = new GridBagConstraints();
-        gbc_panel_3.fill = GridBagConstraints.BOTH;
-        gbc_panel_3.gridx = 1;
-        gbc_panel_3.gridy = 1;
-        contentPane.add(panel_3, gbc_panel_3);
+
+        /* Bil #1 "Data" textfält */
+        JPanel panelBil1Data = new JPanel();
+        GridBagConstraints gbc_panelBil1Data = new GridBagConstraints();
+        gbc_panelBil1Data.insets = new Insets(0, 0, 5, 5);
+        gbc_panelBil1Data.fill = GridBagConstraints.BOTH;
+        gbc_panelBil1Data.gridx = 0;
+        gbc_panelBil1Data.gridy = 0;
+        contentPane.add(panelBil1Data, gbc_panelBil1Data);
+
+        JTextArea textBil1 = new JTextArea();
+        textBil1.setText("Bil #1 Data");
+        textBil1.setText(textBil1.getText() + "\nBilmodell:           "
+                + bil1.getModel() + "\nÅrsmodell:           "
+                + bil1.getYearManufactured() + "\nRegistreringsnummer: "
+                + bil1.getRegistrationNumber() + "\nFärg: ");
+
+        addCarData(bil1, textBil1);
+
+        panelBil1Data.add(textBil1);
+
+        JPanel panelBil1Color = new JPanel();
+        panelBil1Color.setBackground(Color.GREEN);
+        GridBagConstraints gbc_panelBil1Color = new GridBagConstraints();
+        gbc_panelBil1Color.insets = new Insets(0, 0, 5, 0);
+        gbc_panelBil1Color.fill = GridBagConstraints.BOTH;
+        gbc_panelBil1Color.gridx = 1;
+        gbc_panelBil1Color.gridy = 0;
+        contentPane.add(panelBil1Color, gbc_panelBil1Color);
+
+        JPanel panelBil2Data = new JPanel();
+        GridBagConstraints gbc_panelBil2Data = new GridBagConstraints();
+        gbc_panelBil2Data.insets = new Insets(0, 0, 0, 5);
+        gbc_panelBil2Data.fill = GridBagConstraints.BOTH;
+        gbc_panelBil2Data.gridx = 0;
+        gbc_panelBil2Data.gridy = 1;
+        contentPane.add(panelBil2Data, gbc_panelBil2Data);
+
+        JTextArea textBil2 = new JTextArea();
+        textBil2.setFont(stdFont);
+        textBil2.setText("Bil #2 Data");
+        textBil2.setText(textBil2.getText() + "\nBilmodell:           "
+                + "\nÅrsmodell:           " + "\nRegistreringsnummer: "
+                + "\nFärg: ");
+
+        panelBil2Data.add(textBil2);
+
+        JTextArea txtrTextbilfields = new JTextArea();
+        txtrTextbilfields.setText(
+                "\n" + bil2.getModel() + "\n" + bil2.getYearManufactured()
+                        + "\n" + bil2.getRegistrationNumber());
+        panelBil2Data.add(txtrTextbilfields);
+
+        JPanel panelBil2Color = new JPanel();
+        panelBil2Color.setBackground(Color.BLACK);
+        GridBagConstraints gbc_panelBil2Color = new GridBagConstraints();
+        gbc_panelBil2Color.fill = GridBagConstraints.BOTH;
+        gbc_panelBil2Color.gridx = 1;
+        gbc_panelBil2Color.gridy = 1;
+        contentPane.add(panelBil2Color, gbc_panelBil2Color);
     }
-    
-    private JLabel createInfoLabel(Personbil bil)
+
+    JTextArea addCarData(Personbil bil, JTextArea area)
     {
+        JTextArea textArea = new JTextArea();
+        textArea.setText(textArea.getText() + "\n Bilmodell:           "
+                + bil.getModel() + "\n Årsmodell:           "
+                + bil.getYearManufactured() + "\n Registreringsnummer: "
+                + bil.getRegistrationNumber() + "\n Färg: ");
+
+        return textArea;
     }
-    
-//    private JLabel createInfoLabel(Personbil bil)
-//    {
-//        JLabel label = new JLabel("Bilmodell:           " + bil.getModel()
-//                                + "Årsmodell:           " + bil.getYearManufactured()
-//                                + "Registreringsnummer: " + bil.getRegistrationNumber()
-//                                + "Färg: ");
-//        
-//        return label;
-//    }
+    //    private JLabel createInfoLabel(Personbil bil)
+    //    {
+    //        JLabel label = new JLabel("Bilmodell:           " + bil.getModel()
+    //                             + "\n Årsmodell:           " + bil.getYearManufactured()
+    //                             + "\n Registreringsnummer: " + bil.getRegistrationNumber()
+    //                             + "\n Färg: ");
+    //        
+    //        return label;
+    //    }
 }
