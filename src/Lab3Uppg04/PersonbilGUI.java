@@ -84,8 +84,8 @@ public class PersonbilGUI extends JFrame
     {
         bil1 = new Personbil("Saab", 1990, "CCC222", Color.RED);
         bil2 = new Personbil("Volvo", 1999, "ABC988 ", Color.BLACK);
-        //        bil1 = new Personbil("Cadillac", 1903, "ABC123", Color.MAGENTA);
-        //        bil2 = new Personbil("Austin", 1906, "DEF456", Color.GREEN);
+      //bil1 = new Personbil("Cadillac", 1903, "ABC123", Color.MAGENTA);
+      //bil2 = new Personbil("Austin", 1906, "DEF456", Color.GREEN);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }

@@ -39,26 +39,30 @@ instruktionerna efterfrågas numeriska värden för flygriktningen och min lösn
 uppfyller det kravet genom att metoden \texttt{getordinal()} från typen
 \texttt{enum} används för att hämta de implicita värden som tillskrivs de olika
 flygriktningarna i \texttt{Flygriktning} efter den ordningen de deklareras.
-Min lösning för att "sätta" värdet hos en variabel av tyen
-\texttt{Flygriktning} med en \texttt{int} är bristfällig, en mer sofistikerad
-lösning skulle kunna använda mer avancerade funktioner hos typen \texttt{enum}.
+Min lösning för att \emph{sätta} värdet hos en variabel av typen
+\texttt{Flygriktning} med en \texttt{int} är bristfällig, bättre vore att
+basera lösningen på de mer avancerade funktionerna som finns ``inbyggda'' i
+typen \texttt{enum}.
+
 Användandet av \texttt{enum} baseras på information från
 \mbox{The Java Tutorials -- Enum Types}.
 \footnote{\url{https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html}}
 
 
-\subsection{Källkod}
+\subsection{Källkod -- Lab3Uppg02.java}
+\javacode{src/Lab3Uppg02/Lab3Uppg02.java}
+\caption{Lab3Uppg02.java}
+\label{src:uppg02}
+
+\subsection{Källkod -- Flygriktning.java}
 \javacode{src/Lab3Uppg02/Flygriktning.java}
 \caption{Flygriktning.java}
 \label{src:flygriktning}
 
+\subsection{Källkod -- FlygPlan.java}
 \javacode{src/Lab3Uppg02/FlygPlan.java}
 \caption{FlygPlan.java}
 \label{src:flygplan}
-
-\javacode{src/Lab3Uppg02/Lab3Uppg02.java}
-\caption{Lab3Uppg02.java}
-\label{src:uppg02}
 
 
 % Screenshots med Bash, terminalfönsterstorlek 90x40
