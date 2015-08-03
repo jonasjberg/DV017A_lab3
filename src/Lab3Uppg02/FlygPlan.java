@@ -9,6 +9,9 @@
 
 package Lab3Uppg02;
 
+/** 
+ * Klass 'FlygPlan' representerar ett flygplan. 
+ */
 public class FlygPlan
 {
     private int          altitude;
@@ -24,7 +27,8 @@ public class FlygPlan
      * @param identifier    flygplanets modellbeteckning
      */
     public FlygPlan(int altitude, Flygriktning heading, int speed,
-            String identifier) {
+            String identifier)
+    {
         this.altitude = altitude;
         this.heading = heading;
         this.speed = speed;
@@ -39,13 +43,13 @@ public class FlygPlan
      * Alternativ konstruktor hanterar att 'heading' sätt till ett värde av
      * typen 'int'.
      */
-    public FlygPlan(int altitude, int heading, int speed, String identifier) {
+    public FlygPlan(int altitude, int heading, int speed, String identifier)
+    {
         this(altitude, Flygriktning.fromOrdinal(heading), speed, identifier);
     }
 
     /**
      * Returnerar planets höjd.
-     * 
      * @return planets höjd
      */
     public int getAltitude()
@@ -55,7 +59,6 @@ public class FlygPlan
 
     /**
      * Ändrar planets höjd.
-     * 
      * @param altitude  ny höjd
      */
     public void setAltitude(int altitude)
@@ -65,7 +68,6 @@ public class FlygPlan
 
     /**
      * Returnerar planets flygriktning.
-     * 
      * @return planets flygriktning
      */
     public Flygriktning getHeading()
@@ -75,7 +77,6 @@ public class FlygPlan
 
     /**
      * Ändrar planets flygriktning.
-     * 
      * @param heading   ny flygriktning
      */
     public void setHeading(Flygriktning heading)
@@ -85,7 +86,6 @@ public class FlygPlan
 
     /**
      * Returnerar planets hastighet.
-     * 
      * @return planets hastighet
      */
     public int getSpeed()
@@ -95,19 +95,17 @@ public class FlygPlan
 
     /**
      * Ändrar planets hastighet.
-     * 
      * @param speed     ny hastighet
      */
     public void setSpeed(int speed)
     {
-        if (speed > 0) {                /* Anta att speed inte är en vektor. */
+        if (speed > 0) { /* Anta att speed inte är en vektor. */
             this.speed = speed;
         }
     }
 
     /**
      * Returnerar planets modellbeteckning.
-     * 
      * @return planets modellbeteckning
      */
     public String getIdentifier()
@@ -121,7 +119,6 @@ public class FlygPlan
 
     /**
      * Ändrar planets modellbeteckning.
-     * 
      * @param identifier    ny modellbeteckning
      */
     public void setIdentifier(String identifier)

@@ -9,10 +9,12 @@
 
 package Lab3Uppg02;
 
+/** 
+ * Testar klassen 'FlygPlan' och enum-typen 'Flygriktning' 
+ */
 public class Lab3Uppg02
 {
-    private static FlygPlan       planEtt;
-    private static FlygPlan       planTva;
+    private static FlygPlan planEtt, planTva;
 
     public static void main(String[] args)
     {

@@ -11,6 +11,9 @@ package Lab3Uppg05;
 
 import Lab3Uppg04.Personbil;
 
+/**
+ * Klass 'Bilagare' representerar en bilägare.
+ */
 public class Bilagare
 {
     private static final String TXT_DOES_NOT_OWN_CAR = "Äger ingen bil för närvarande";

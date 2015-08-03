@@ -12,6 +12,9 @@ package Lab3Uppg04;
 import java.awt.Color;
 import java.util.Calendar;
 
+/**
+ * Klass 'Personbil' representerar en personbil.
+ */
 public class Personbil
 {
     private String model;
@@ -49,7 +52,8 @@ public class Personbil
      */
     public void setModel(String model)
     {
-        if (model == null) return;
+        if (model == null)
+            return;
         this.model = model;
     }
 
@@ -89,7 +93,8 @@ public class Personbil
      */
     public void setRegistrationNumber(String registrationNumber)
     {
-        if (registrationNumber == null) return;
+        if (registrationNumber == null)
+            return;
         this.registrationNumber = registrationNumber;
     }
 

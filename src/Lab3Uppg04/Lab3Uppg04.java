@@ -11,16 +11,18 @@ package Lab3Uppg04;
 
 import java.awt.Color;
 
+/**
+ * Testar klassen 'Personbil'
+ */
 public class Lab3Uppg04
 {
-    private static Personbil bil1;
-    private static Personbil bil2;
+    private static Personbil bil1, bil2;
 
     public static void main(String[] args)
     {
         bil1 = new Personbil("Saab", 1990, "CCC222", Color.RED);
         bil2 = new Personbil("Volvo", 1999, "ABC988 ", Color.BLACK);
-        
+
         bil1.printAllData();
         bil2.printAllData();
     }

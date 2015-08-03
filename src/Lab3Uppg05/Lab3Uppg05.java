@@ -10,23 +10,26 @@
 package Lab3Uppg05;
 
 import java.awt.Color;
-
 import Lab3Uppg04.Personbil;
 
+/**
+ * Testprogram för klassen 'Bilagare'.
+ */
 public class Lab3Uppg05
 {
     private static Personbil bil1;
     private static Personbil bil2;
     private static Bilagare agare1;
     
-    /* Testprogram för klassen 'Bilagare' */
     public static void main(String[] args)
     {
         init();
         run();
     }
     
-    /* Initiera objekt */
+    /** 
+     * Initierar objekten.
+     */
     private static void init()
     {
         bil1 = new Personbil("Ferrari 250 GTO", 1962, "1337GT", Color.RED);
@@ -34,7 +37,9 @@ public class Lab3Uppg05
         agare1 = new Bilagare("Bilägarkatten Gibson", "Vägenvägen 72", bil1);
     }
     
-    /* Kör tester */
+    /**
+     * Kör olika tester.
+     */
     private static void run()
     {
         agare1.printName();

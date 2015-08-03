@@ -22,6 +22,9 @@ import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 import java.awt.FlowLayout;
 
+/** 
+ * Vidareutvecklat test av klassen 'Personbil'
+ */
 public class PersonbilGUI extends JFrame
 {
     /* Används av "serialization runtime" .. */
@@ -38,7 +41,6 @@ public class PersonbilGUI extends JFrame
     private static Personbil bil1;
     private static Personbil bil2;
 
-    /** Starta applikationen */
     public static void main(String[] args)
     {
         EventQueue.invokeLater(new Runnable() {
@@ -54,7 +56,9 @@ public class PersonbilGUI extends JFrame
         });
     }
 
-    /** Anropar metoder för att initiera och rita GUI:t */
+    /** 
+     * Anropar metoder för att initiera och rita GUI:t 
+     */
     public PersonbilGUI()
     {
         initialize();
@@ -73,18 +77,22 @@ public class PersonbilGUI extends JFrame
         createCar2ColoredArea();
     }
 
-    /** Skapa objekt och konfigurera JFrame */
+    /**
+     * Skapar objekt och konfigurera JFrame 
+     */
     private void initialize()
     {
         bil1 = new Personbil("Saab", 1990, "CCC222", Color.RED);
         bil2 = new Personbil("Volvo", 1999, "ABC988 ", Color.BLACK);
-//        bil1 = new Personbil("Cadillac", 1903, "ABC123", Color.MAGENTA);
-//        bil2 = new Personbil("Austin", 1906, "DEF456", Color.GREEN);
+        //        bil1 = new Personbil("Cadillac", 1903, "ABC123", Color.MAGENTA);
+        //        bil2 = new Personbil("Austin", 1906, "DEF456", Color.GREEN);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    /** Skapar en "frame" som delar upp ritytan i en "grid"-layout */
+    /**
+     * Skapar en "frame" som delar upp ritytan i en "grid"-layout 
+     */
     private void createFrame()
     {
         setBounds(100, 100, 450, 300);
@@ -102,7 +110,9 @@ public class PersonbilGUI extends JFrame
         contentPane.setLayout(gbl_contentPane);
     }
 
-    /** Ritar färgband som representerar färgen hos Bil #1 */
+    /**
+     * Ritar färgband som representerar färgen hos Bil #1 
+     */
     private void createCar1ColoredArea()
     {
         JPanel panelBil1Color = new JPanel();
@@ -120,7 +130,9 @@ public class PersonbilGUI extends JFrame
         contentPane.add(panelBil1Color, gbc_panelBil1Color);
     }
 
-    /** Ritar färgband som representerar färgen hos Bil #2 */
+    /** 
+     * Ritar färgband som representerar färgen hos Bil #2
+     */
     private void createCar2ColoredArea()
     {
         JPanel panelBil2Color = new JPanel();
@@ -138,7 +150,9 @@ public class PersonbilGUI extends JFrame
         contentPane.add(panelBil2Color, gbc_panelBil2Color);
     }
 
-    /** Ritar text med data för Bil #1 */
+    /**
+     * Ritar text med data för Bil #1 
+     */
     private void createCar1Text()
     {
         JPanel panelBil1Data = new JPanel();
@@ -165,7 +179,9 @@ public class PersonbilGUI extends JFrame
         panelBil1Data.add(textBil1);
     }
 
-    /** Ritar text med data för Bil #2 */
+    /** 
+     * Ritar text med data för Bil #2 
+     */
     private void createCar2Text()
     {
         JPanel panelBil2Data = new JPanel();

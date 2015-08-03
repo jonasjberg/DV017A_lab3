@@ -11,14 +11,13 @@ package Lab3Uppg03;
 
 import java.text.DecimalFormat;
 
+/**
+ * Testar metoder hos klassen 'Cirkel'.
+ */
 public class Lab3Uppg03
 {
-    private static Cirkel c1;
-    private static Cirkel c2;
+    private static Cirkel c1, c2;
 
-    /**
-     * Testar metoder hos klassen 'Cirkel'.
-     */
     public static void main(String[] args)
     {
         int radius = 13;
@@ -26,18 +25,18 @@ public class Lab3Uppg03
 
         c1 = new Cirkel(radius);
         c2 = new Cirkel(color, radius);
-        
+
         showObjectState();
-        
+
         c1.setColor("svart");
         c1.setRadius(1337);
-        
+
         c2.setColor("vit");
         c2.setRadius(-1);
 
         showObjectState();
     }
-    
+
     /**
      * Skriver ut all data för cirklarna 'c1' och 'c2'.
      */
