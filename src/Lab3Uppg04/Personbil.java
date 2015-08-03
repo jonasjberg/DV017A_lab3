@@ -116,10 +116,10 @@ public class Personbil
      */
     public void printAllData()
     {
-        System.out.println("----------------------------------------");
         System.out.println("Modell:          " + getModel());
         System.out.println("Tillverklingsår: " + getYearManufactured());
         System.out.println("Registreringsnr: " + getRegistrationNumber());
         System.out.println("Färg:            " + getColor().toString());
+        System.out.println("----------------------------------------");
     }
 }

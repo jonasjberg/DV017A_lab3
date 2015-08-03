@@ -14,6 +14,8 @@ import Lab3Uppg04.Personbil;
 public class Bilagare
 {
     private static final String TXT_DOES_NOT_OWN_CAR = "Äger ingen bil för närvarande";
+    private static final String TXT_PREFIX_NAME      = "Bilägarens namn:   ";
+    private static final String TXT_PREFIX_ADRESS    = "Bilägarens adress: ";
     private String              name;
     private String              adress;
     private Personbil           bil;
@@ -32,25 +34,23 @@ public class Bilagare
     }
 
     /**
-     * Returnerar bilägarens namn.
-     * @return    bilägarens namn
+     * Skriver ut bilägarens namn.
      */
-    public String getName()
+    public void printName()
     {
-        return name;
+        System.out.println(TXT_PREFIX_NAME + name);
     }
 
     /**
-     * Returnerar bilägarens adress.
-     * @return    bilägarens adress
+     * Skriver ut bilägarens adress.
      */
-    public String getAdress()
+    public void printAdress()
     {
-        return adress;
+        System.out.println(TXT_PREFIX_ADRESS + adress);
     }
 
     /**
-     * Bilägaren säljer bilen. Referensvariabeln 'bil' sätts till 'null'.
+     * Bilägaren säljer bilen.
      */
     public void sellCar()
     {
