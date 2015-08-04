@@ -23,7 +23,7 @@ public class Lab3Uppg06
     }
 
     /**
-     * Beräknar och skriver ut summan respektive produkten av talen. 
+     * Beräknar och skriver ut summan respektive produkten av talen.
      */
     private static void printSumAndProduct()
     {
@@ -42,7 +42,7 @@ public class Lab3Uppg06
         prettyPrintNumbers(product);
         System.out.println("\n");
     }
-    
+
     /**
      * Skriver ut det minsta och största talet.
      */

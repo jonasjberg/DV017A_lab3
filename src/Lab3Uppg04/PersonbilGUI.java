@@ -22,7 +22,7 @@ import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 import java.awt.FlowLayout;
 
-/** 
+/**
  * Vidareutvecklat test av klassen 'Personbil'
  */
 public class PersonbilGUI extends JFrame
@@ -56,8 +56,8 @@ public class PersonbilGUI extends JFrame
         });
     }
 
-    /** 
-     * Anropar metoder för att initiera och rita GUI:t 
+    /**
+     * Anropar metoder för att initiera och rita GUI:t
      */
     public PersonbilGUI()
     {
@@ -78,7 +78,7 @@ public class PersonbilGUI extends JFrame
     }
 
     /**
-     * Skapar objekt och konfigurera JFrame 
+     * Skapar objekt och konfigurera JFrame
      */
     private void initialize()
     {
@@ -91,7 +91,7 @@ public class PersonbilGUI extends JFrame
     }
 
     /**
-     * Skapar en "frame" som delar upp ritytan i en "grid"-layout 
+     * Skapar en "frame" som delar upp ritytan i en "grid"-layout
      */
     private void createFrame()
     {
@@ -111,7 +111,7 @@ public class PersonbilGUI extends JFrame
     }
 
     /**
-     * Ritar färgband som representerar färgen hos Bil #1 
+     * Ritar färgband som representerar färgen hos Bil #1
      */
     private void createCar1ColoredArea()
     {
@@ -130,7 +130,7 @@ public class PersonbilGUI extends JFrame
         contentPane.add(panelBil1Color, gbc_panelBil1Color);
     }
 
-    /** 
+    /**
      * Ritar färgband som representerar färgen hos Bil #2
      */
     private void createCar2ColoredArea()
@@ -151,7 +151,7 @@ public class PersonbilGUI extends JFrame
     }
 
     /**
-     * Ritar text med data för Bil #1 
+     * Ritar text med data för Bil #1
      */
     private void createCar1Text()
     {
@@ -179,8 +179,8 @@ public class PersonbilGUI extends JFrame
         panelBil1Data.add(textBil1);
     }
 
-    /** 
-     * Ritar text med data för Bil #2 
+    /**
+     * Ritar text med data för Bil #2
      */
     private void createCar2Text()
     {

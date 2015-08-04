@@ -9,8 +9,8 @@
 
 package Lab3Uppg02;
 
-/** 
- * Testar klassen 'FlygPlan' och enum-typen 'Flygriktning' 
+/**
+ * Testar klassen 'FlygPlan' och enum-typen 'Flygriktning'
  */
 public class Lab3Uppg02
 {

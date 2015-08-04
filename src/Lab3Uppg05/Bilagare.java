@@ -74,11 +74,10 @@ public class Bilagare
      */
     public void printCarData()
     {
-        if (bil == null) {
+        if (bil == null)
             System.out.println(TXT_DOES_NOT_OWN_CAR);
-        } else {
+        else
             bil.printAllData();
-        }
     }
 
 }

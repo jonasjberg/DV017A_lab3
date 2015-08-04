@@ -20,14 +20,14 @@ public class Lab3Uppg05
     private static Personbil bil1;
     private static Personbil bil2;
     private static Bilagare agare1;
-    
+
     public static void main(String[] args)
     {
         init();
         run();
     }
-    
-    /** 
+
+    /**
      * Initierar objekten.
      */
     private static void init()
@@ -36,7 +36,7 @@ public class Lab3Uppg05
         bil2 = new Personbil("Bugatti Royale Kellner Coupe", 1931, "EWS13", Color.BLUE);
         agare1 = new Bilagare("Bilägarkatten Gibson", "Vägenvägen 72", bil1);
     }
-    
+
     /**
      * Kör olika tester.
      */
@@ -48,7 +48,7 @@ public class Lab3Uppg05
         System.out.println("");
         System.out.println("* Data om bilägarens bil:");
         agare1.printCarData();
-        
+
         System.out.println("");
         System.out.println("* Bilägaren säljer sin bil ..");
         agare1.sellCar();
@@ -56,11 +56,11 @@ public class Lab3Uppg05
         System.out.println("");
         System.out.println("* Data om bilägarens bil:");
         agare1.printCarData();
-        
+
         System.out.println("");
         System.out.println("* Bilägaren köper en bil ..");
         agare1.buyCar(bil2);
         agare1.printCarData();
-        
+
     }
 }
