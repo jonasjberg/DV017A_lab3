@@ -7,6 +7,8 @@
  * Labb #3    Uppgift 2 JUnit test
  */
 
+/* TODO: Skriv klart koden */
+
 package test;
 
 import static org.junit.Assert.fail;
