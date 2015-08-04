@@ -11,5 +11,23 @@ package Lab3Uppg06;
 
 public class Berakning
 {
+    public static int getSum(int a, int b, int c)
+    {
+        return a + b + c;
+    }
 
+    public static int getProduct(int a, int b, int c)
+    {
+        return a * b * c;
+    }
+
+    public static int getSmallest(int a, int b, int c)
+    {
+        return Math.min(a, Math.min(b, c));
+    }
+
+    public static int getLargest(int a, int b, int c)
+    {
+        return Math.max(a, Math.max(b, c));
+    }
 }
