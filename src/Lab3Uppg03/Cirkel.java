@@ -10,7 +10,7 @@
 package Lab3Uppg03;
 
 /**
- * Klass 'Cirkel' representerar en cirkel. 
+ * Klass 'Cirkel' representerar en cirkel.
  */
 public class Cirkel
 {

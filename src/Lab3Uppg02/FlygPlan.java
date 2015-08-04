@@ -9,8 +9,8 @@
 
 package Lab3Uppg02;
 
-/** 
- * Klass 'FlygPlan' representerar ett flygplan. 
+/**
+ * Klass 'FlygPlan' representerar ett flygplan.
  */
 public class FlygPlan
 {

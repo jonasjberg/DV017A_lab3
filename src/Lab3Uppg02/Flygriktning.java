@@ -18,7 +18,7 @@ public enum Flygriktning {
      * i den ordning de deklarerades. (STOPPED = 0, NORTH = 1, osv.. ) */
     private static Flygriktning[] allValues = values();
 
-    /* Metod för att kunna sätta en enum med en int. 
+    /* Metod för att kunna sätta en enum med en int.
      * Förutsätter att ordningen för "enumens" värden inte ändras. */
     public static Flygriktning fromOrdinal(int n)
     {

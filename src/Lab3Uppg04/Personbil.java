@@ -96,6 +96,7 @@ public class Personbil
     {
         if (registrationNumber == null)
             return;
+
         this.registrationNumber = registrationNumber;
     }
 
