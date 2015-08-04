@@ -21,12 +21,12 @@ public class Berakning
         return a * b * c;
     }
 
-    public static int getSmallest(int a, int b, int c)
+    public static int getMin(int a, int b, int c)
     {
         return Math.min(a, Math.min(b, c));
     }
 
-    public static int getLargest(int a, int b, int c)
+    public static int getMax(int a, int b, int c)
     {
         return Math.max(a, Math.max(b, c));
     }
