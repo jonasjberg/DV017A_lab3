@@ -54,6 +54,7 @@ public class Personbil
     {
         if (model == null)
             return;
+
         this.model = model;
     }
 
@@ -113,6 +114,9 @@ public class Personbil
      */
     public void setColor(Color color)
     {
+        if (color == null)
+            return;
+
         this.color = color;
     }
 
