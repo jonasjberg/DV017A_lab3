@@ -17,6 +17,7 @@ public class Lab3Uppg06
 
     public static void main(String[] args)
     {
+        System.out.println("");
         printSumAndProduct();
         printMinAndMax();
     }
