@@ -34,11 +34,11 @@ public class Lab3Uppg06
         int product = Berakning.getProduct(a, b, c);
 
         System.out.print("För talen     ");
-        printListofNumbers(a, b, c);
+        prettyPrintNumbers(a, b, c);
         System.out.print("\nblir summan   ");
-        printListofNumbers(sum);
+        prettyPrintNumbers(sum);
         System.out.print("\noch produkten ");
-        printListofNumbers(product);
+        prettyPrintNumbers(product);
         System.out.println("\n");
     }
     
@@ -55,11 +55,11 @@ public class Lab3Uppg06
         int max = Berakning.getMax(a, b, c);
 
         System.out.print("Bland talen            ");
-        printListofNumbers(a, b, c);
+        prettyPrintNumbers(a, b, c);
         System.out.print("\nså är det minsta talet ");
-        printListofNumbers(min);
+        prettyPrintNumbers(min);
         System.out.print("\noch det största talet  ");
-        printListofNumbers(max);
+        prettyPrintNumbers(max);
         System.out.println("\n");
     }
 
@@ -68,7 +68,7 @@ public class Lab3Uppg06
      * undantag för det sista talet där ett "och" skrivs ut.
      * @param numbers   tal att skriva ut
      */
-    private static void printListofNumbers(int... numbers)
+    private static void prettyPrintNumbers(int... numbers)
     {
         for (int i = 0; i < numbers.length; i++) {
             System.out.print("\"" + numbers[i] + "\"");
@@ -78,7 +78,6 @@ public class Lab3Uppg06
 
             if (i == numbers.length - 2)
                 System.out.print(" och ");
-
             else if (i != numbers.length - 1)
                 System.out.print(", ");
         }
